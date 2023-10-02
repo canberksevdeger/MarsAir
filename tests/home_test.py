@@ -18,5 +18,4 @@ class HomeTest(BaseTest):
     def test_valid_promotion_code(self):
         page = HomePage(self.driver)
         search_result = page.search_with_valid_promotion_code()
-        print("SEARCH_RESULT: ", search_result)
         self.assertTrue(page.check_valid_promotion_result(search_result))
